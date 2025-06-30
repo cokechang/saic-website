@@ -82,14 +82,14 @@
     <!-- 主页面 -->
     <div class="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900">
         <!-- 首页 -->
-        <section id="home" class="pt-32 pb-16 relative overflow-hidden">
+        <section id="home" class="min-h-screen flex flex-col justify-center items-center text-center px-4">
             <div class="container mx-auto px-6 text-center relative z-10">
                 <h1 class="text-6xl md:text-8xl font-bold mb-6 gradient-text leading-tight">第九届上海人工智能大会</h1>
                 <p class="text-xl md:text-2xl text-gray-300 mb-12 max-w-4xl mx-auto leading-relaxed">汇聚全球AI精英，探索人工智能前沿技术，推动产业创新发展，构建智能未来生态</p>
                 <div class="flex flex-col md:flex-row gap-6 justify-center items-center">
                   <a href="https://www.huodongxing.com/event/2808793822500?td=9183155573691" target="_blank" rel="noopener noreferrer" class="bg-gradient-to-r from-cyan-500 to-purple-600 text-white px-8 py-4 rounded-full text-lg font-semibold hover:from-cyan-600 hover:to-purple-700 transition-all hover-scale shadow-lg">立即报名参会</a>
                 </div>
-                <div class="grid grid-cols-2 md:grid-cols-4 gap-8 mt-20">
+                <div id="statsSection" class="grid grid-cols-2 md:grid-cols-4 gap-8 mt-20 opacity-0 transform -translate-y-10 transition-all duration-700">
                     <div class="text-center">
                         <div class="text-4xl font-bold text-cyan-400 mb-2">8届</div>
                         <div class="text-gray-400">已举办届数</div>
@@ -661,6 +661,18 @@ function showContactModal() {
 function closeContactModal() {
   document.getElementById('contactModal').classList.add('hidden');
 }
+</script>
+    <script>
+document.addEventListener('scroll', function () {
+    const statsSection = document.getElementById('statsSection');
+    const rect = statsSection.getBoundingClientRect();
+    const windowHeight = window.innerHeight || document.documentElement.clientHeight;
+
+    if (rect.top <= windowHeight - 100) { // 当距离窗口底部还有 100px 时触发
+        statsSection.classList.remove('opacity-0', '-translate-y-10');
+        statsSection.classList.add('opacity-100', 'translate-y-0');
+    }
+});
 </script>
 </body>
 </html>
