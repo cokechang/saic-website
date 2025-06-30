@@ -246,7 +246,7 @@
                     </div>
                 </div>
                 <div class="text-center mt-8">
-                    <button class="bg-gradient-to-r from-cyan-500 to-purple-600 text-white px-6 py-3 rounded-full hover:from-cyan-600 hover:to-purple-700 transition-all">下载完整议程</button>
+                    <a href="https://www.huodongxing.com/event/2808793822500?td=9183155573691" target="_blank" rel="noopener noreferrer" class="...">下载完整议程</a>
                 </div>
             </div>
         </section>
@@ -303,7 +303,7 @@
         </div>
 
         <div class="text-center mt-8">
-          <a href="https://space.bilibili.com/xxxxx" target="_blank" class="inline-block bg-gradient-to-r from-purple-500 to-pink-500 text-white font-semibold px-6 py-3 rounded-full hover:scale-105 transition-transform duration-300">查看更多视频</a>
+          <a href="javascript:void(0);" onclick="showQRCodeModal()" class="...">查看更多视频</a>
         </div>
       </div>
     </section>
@@ -475,7 +475,7 @@
 
                 <div class="text-center">
                     <p class="text-gray-400 mb-6">更多合作伙伴持续加入中...</p>
-                    <button class="bg-gradient-to-r from-cyan-500 to-purple-600 text-white px-6 py-3 rounded-full hover:from-cyan-600 hover:to-purple-700 transition-all">成为合作伙伴</button>
+                    <a href="javascript:void(0);" onclick="alert('联系张老师：15026786876');" class="...">成为合作伙伴</a>
                 </div>
             </div>
         </section>
@@ -631,6 +631,22 @@
             }
         });
     </script>
+    <!-- 视频号二维码 Modal -->
+<div id="qrModal" class="fixed inset-0 bg-black/50 flex items-center justify-center hidden z-50">
+  <div class="bg-white p-4 rounded-lg relative max-w-xs w-full">
+    <img src="https://raw.githubusercontent.com/cokechang/saic-website/refs/heads/main/SAIC%20%E7%BD%91%E7%AB%99%E4%BA%8C%E7%BB%B4%E7%A0%81/SAIC%20%E8%A7%86%E9%A2%91%E5%8F%B7%E4%BA%8C%E7%BB%B4%E7%A0%81.jpeg" alt="视频号二维码" class="w-full rounded">
+    <button onclick="closeQRCodeModal()" class="absolute top-2 right-2 text-gray-500 hover:text-black text-xl cursor-pointer">✕</button>
+  </div>
+</div>
+
+<script>
+function showQRCodeModal() {
+  document.getElementById('qrModal').classList.remove('hidden');
+}
+function closeQRCodeModal() {
+  document.getElementById('qrModal').classList.add('hidden');
+}
+</script>
 </body>
 </html>
 
