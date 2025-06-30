@@ -92,7 +92,7 @@
                 <p class="text-xl md:text-2xl text-gray-300 mb-12 max-w-4xl mx-auto leading-relaxed">汇聚全球AI精英，探索人工智能前沿技术，推动产业创新发展，构建智能未来生态</p>
                 <div class="flex flex-col md:flex-row gap-6 justify-center items-center">
                   <a href="https://www.huodongxing.com/event/2808793822500?td=9183155573691" target="_blank" rel="noopener noreferrer" class="bg-gradient-to-r from-cyan-500 to-purple-600 text-white px-8 py-4 rounded-full text-lg font-semibold hover:from-cyan-600 hover:to-purple-700 transition-all hover-scale shadow-lg">立即报名参会</a>
-                  <a href="#about" class="border-2 border-cyan-400 px-8 py-4 rounded-full text-lg font-semibold hover:bg-cyan-400 hover:text-slate-900 transition-all">了解更多</a>
+                  <a href="#about" class="bg-gradient-to-r from-cyan-500 to-purple-500 text-white px-6 py-2 rounded-full hover:from-cyan-600 hover:to-purple-600 transition-all shadow-lg hover-scale">了解更多</a>
                 </div>
                 <div class="grid grid-cols-2 md:grid-cols-4 gap-8 mt-20">
                     <div class="text-center">
@@ -246,7 +246,7 @@
                     </div>
                 </div>
                 <div class="text-center mt-8">
-                    <a href="https://www.huodongxing.com/event/2808793822500?td=9183155573691" target="_blank" rel="noopener noreferrer" class="...">下载完整议程</a>
+                    <a href="https://www.huodongxing.com/event/2808793822500?td=9183155573691" target="_blank" class="bg-gradient-to-r from-cyan-500 to-purple-500 text-white px-6 py-2 rounded-full hover:from-cyan-600 hover:to-purple-600 transition-all shadow-lg hover-scale">下载完整议程</a>
                 </div>
             </div>
         </section>
@@ -303,7 +303,7 @@
         </div>
 
         <div class="text-center mt-8">
-          <a href="javascript:void(0);" onclick="showQRCodeModal()" class="...">查看更多视频</a>
+          <a href="javascript:void(0);" onclick="showQRCodeModal()" class="bg-gradient-to-r from-cyan-500 to-purple-500 text-white px-6 py-2 rounded-full hover:from-cyan-600 hover:to-purple-600 transition-all shadow-lg hover-scale">查看更多视频</a>
         </div>
       </div>
     </section>
@@ -475,7 +475,10 @@
 
                 <div class="text-center">
                     <p class="text-gray-400 mb-6">更多合作伙伴持续加入中...</p>
-                    <a href="javascript:void(0);" onclick="alert('联系张老师：15026786876');" class="...">成为合作伙伴</a>
+                    <a href="javascript:void(0);" onclick="showContactModal()"
+   class="bg-gradient-to-r from-cyan-500 to-blue-500 text-white px-6 py-2 rounded-full hover:from-cyan-600 hover:to-blue-600 transition-all">
+   成为合作伙伴
+</a>
                 </div>
             </div>
         </section>
@@ -645,6 +648,23 @@ function showQRCodeModal() {
 }
 function closeQRCodeModal() {
   document.getElementById('qrModal').classList.add('hidden');
+}
+</script>
+    <!-- 合作伙伴弹窗 -->
+<div id="contactModal" class="fixed inset-0 bg-black/50 flex items-center justify-center hidden z-50">
+  <div class="bg-white p-6 rounded-lg max-w-xs w-full text-center relative">
+    <p class="text-lg font-semibold mb-2">联系张老师</p>
+    <p class="text-xl text-blue-600 font-bold mb-4">15026786876</p>
+    <button onclick="closeContactModal()" class="absolute top-2 right-2 text-gray-500 hover:text-black text-xl cursor-pointer">✕</button>
+  </div>
+</div>
+
+<script>
+function showContactModal() {
+  document.getElementById('contactModal').classList.remove('hidden');
+}
+function closeContactModal() {
+  document.getElementById('contactModal').classList.add('hidden');
 }
 </script>
 </body>
